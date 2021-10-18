@@ -2,6 +2,13 @@
 Changelog for package uol_cmp9767m_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.0 (2021-10-07)
+------------------
+* Merge pull request `#62 <https://github.com/LCAS/CMP9767M/issues/62>`_ from LCAS/bacchus
+  Added dependencies on bacchus
+* Added dependencies on bacchus
+* Contributors: Marc Hanheide, Riccardo
+
 0.6.1 (2021-02-09)
 ------------------
 
