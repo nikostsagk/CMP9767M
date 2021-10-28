@@ -14,30 +14,32 @@ from nav_msgs.msg import Odometry
 class MyTFListener:
     def __init__(self):
         self.listener = tf.TransformListener()
-        self.flaser_sub = message_filters.Subscriber("/thorvald_001/front_scan", LaserScan)
-        self.blaser_sub = message_filters.Subscriber("/thorvald_001/back_scan", LaserScan)
+        self.laser_subs = [
+            message_filters.Subscriber("/thorvald_001/front_scan", LaserScan),
+            message_filters.Subscriber("/thorvald_001/back_scan", LaserScan)
+        ]
         self.pub = rospy.Publisher("closest_laser_scan", PoseStamped, queue_size=1)
 
-        self.ts = message_filters.TimeSynchronizer([self.flaser_sub, self.blaser_sub], 1)
+        self.ts = message_filters.ApproximateTimeSynchronizer(self.laser_subs, 1, 0.1)
         self.ts.registerCallback(self.laser_cb)
 
     def laser_cb(self, msg1, msg2):
         messages = [msg1, msg2]
 
         fmin = min(msg1.ranges)
-        farg_min = np.argmin(fmin)
+        farg_min = np.argmin(msg1.ranges)
 
         bmin = min(msg2.ranges)
-        barg_min = np.argmin(bmin)
+        barg_min = np.argmin(msg2.ranges)
 
         polar_r, index, m = min((fmin, farg_min, 0), (bmin, barg_min, 1), key=lambda x: x[0])
         polar_theta = messages[m].angle_min + (index * messages[m].angle_increment)
 
         # polar to cartesian
-        x = polar_r * np.cos(np.pi + polar_theta)
-        y = polar_r * np.sin(np.pi + polar_theta)
+        x = polar_r * np.cos(polar_theta)
+        y = polar_r * np.sin(polar_theta)
+        
         msg = PoseStamped()
-
         msg.header = messages[m].header
         msg.pose.position.x = x
         msg.pose.position.y = y
