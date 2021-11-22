@@ -31,10 +31,13 @@ class image_projection:
         if not self.camera_model:
             return
 
-        #project a point in camera coordinates into the pixel coordinates
-        uv = self.camera_model.project3dToPixel((0,0,1.0))
+        # Project pixel into the camera coordinates
+        uv = self.camera_model.projectPixelTo3dRay((0,0, 0.0))
+        
+        # Scale 3D point to 1m depth
+        uv_norm = (1/uv[2] )* uv
 
-        print 'Pixel coordinates: ', uv
+        print '3D coordinates: ', uv
         print ''
 
         try:
