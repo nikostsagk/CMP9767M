@@ -2,7 +2,7 @@
 <sdf version='1.6'>
   <model name='cmp9767m_enclosure'>
     <link name='Wall_0'>
-      <pose frame=''>0 12.5 0 0 -0 0</pose>
+      <pose frame=''>0 14.0 0 0 -0 0</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -23,7 +23,7 @@
         <pose frame=''>0 0 0.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>25.0 0.15 1.0</size>
+            <size>28.0 0.15 1.0</size>
           </box>
         </geometry>
         <material>
@@ -51,7 +51,7 @@
         <pose frame=''>0 0 0.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>25.0 0.15 1.0</size>
+            <size>28.0 0.15 1.0</size>
           </box>
         </geometry>
         <surface>
@@ -102,7 +102,7 @@
       </collision>
     </link>
     <link name='Wall_1'>
-      <pose frame=''>0 -12.5 0 0 -0 0</pose>
+      <pose frame=''>0 -14.0 0 0 -0 0</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -123,7 +123,7 @@
         <pose frame=''>0 0 0.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>25.0 0.15 1.0</size>
+            <size>28.0 0.15 1.0</size>
           </box>
         </geometry>
         <material>
@@ -151,7 +151,7 @@
         <pose frame=''>0 0 0.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>25.0 0.15 1.0</size>
+            <size>28.0 0.15 1.0</size>
           </box>
         </geometry>
         <surface>
@@ -202,7 +202,7 @@
       </collision>
     </link>
     <link name='Wall_2'>
-      <pose frame=''>-12.5 0 0 0 -0 1.57</pose>
+      <pose frame=''>-14.0 0 0 0 -0 1.57</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -223,7 +223,7 @@
         <pose frame=''>0 0 0.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>25.0 0.15 1.0</size>
+            <size>28.0 0.15 1.0</size>
           </box>
         </geometry>
         <material>
@@ -251,7 +251,7 @@
         <pose frame=''>0 0 0.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>25.0 0.15 1.0</size>
+            <size>28.0 0.15 1.0</size>
           </box>
         </geometry>
         <surface>
@@ -302,7 +302,7 @@
       </collision>
     </link>
     <link name='Wall_3'>
-      <pose frame=''>12.5 0 0 0 -0 1.57</pose>
+      <pose frame=''>14.0 0 0 0 -0 1.57</pose>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
       <kinematic>0</kinematic>
@@ -323,7 +323,7 @@
         <pose frame=''>0 0 0.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>25.0 0.15 1.0</size>
+            <size>28.0 0.15 1.0</size>
           </box>
         </geometry>
         <material>
@@ -351,7 +351,7 @@
         <pose frame=''>0 0 0.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>25.0 0.15 1.0</size>
+            <size>28.0 0.15 1.0</size>
           </box>
         </geometry>
         <surface>

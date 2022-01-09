@@ -14,7 +14,7 @@ global_inflation_layer:
   cost_scaling_factor: 2.58
 
 local_inflation_layer:
-  inflation_radius: 1.5
+  inflation_radius: 0.2
   cost_scaling_factor: 5.0
 
 global_obstacle_layer:
